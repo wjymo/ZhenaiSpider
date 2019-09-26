@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wjy.dao.UserProfileDAO">
+	
+	<insert id="insertUserProfile" >
+		insert into `user_profile`(`userId`,`city`,`username`,`userImg`,`age`,
+		`signatureStr`,`maritalStatus`,`constellation`,`height`,`weight`,`workplace`,`income`,
+		`job`,`education`,`baseContent`,`interests`,`nation`,`birthplace`,`bodyType`,
+		`smoke`,`drink`,`house`,`car`,`children`,`toHaveChildren`,`marriedTime`,
+		`extraContent`,`criteriaContent`)
+		values(
+		#{userId},#{city},#{username},#{userImg},#{age},#{signatureStr},
+		#{maritalStatus},#{constellation},#{height},#{weight},#{workplace},#{income},
+		#{job},#{education},#{baseContent},#{interests},#{nation},#{birthplace},#{bodyType},
+		#{smoke},#{drink},#{house},#{car},#{children},#{toHaveChildren},#{marriedTime},
+		#{extraContent},#{criteriaContent}
+		);
+	</insert>
+
+</mapper>

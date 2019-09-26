@@ -1,0 +1,39 @@
+wjy:
+  config:
+    regexConfig:
+      cityRegex: <a href="(http://www.zhenai.com/zhenghun/[a-z]+)" [^>]*>([^<]+)</a>
+      userRegex: <a href="(http://album.zhenai.com/u/[0-9]+)" [^>]*>([^<]+)</a>
+      nextPageRegex: <a href="(http://www.zhenai.com/zhenghun/[a-zA-Z]+/[0-9]+)">[^>]+</a>
+      userImgRegex: https://photo.zastatic.com/images/photo/[a-zA-Z0-9/.?&;=]+
+
+    httpClientConfig:
+      maxTotal: 200
+      defaultMaxPerRoute: 20
+      connectTimeout: 10000
+      connectionRequestTimeout: 5000
+      socketTimeout: 100000
+    commonConfig:
+      threadNum: 5
+    xpathConfig:
+      content: 11
+      allnumber: 22
+      daynumber: 33
+      commentnumber: 44
+      collectnumber: 55
+      supportnumber: 66
+      againstnumber: 77
+spring:
+  redis:
+    host: 172.168.1.108
+    port: 6379
+    password: gggyvw
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.168.1.108:33068/zhenai?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
